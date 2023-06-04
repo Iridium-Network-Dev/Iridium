@@ -1,0 +1,34 @@
+{
+  "name": "iridium",
+  "version": "1.0.0",
+  "description": "Iridium proxy",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iridium-Dev/Iridium.git"
+  },
+  "keywords": [
+    "Proxy",
+    "Bypass",
+    "Censorship",
+    "Iridium",
+    "Games",
+    "bypasser"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iridium-Dev/Iridium/issues"
+  },
+  "homepage": "https://github.com/Iridium-Dev/Iridium#readme",
+  "dependencies": {
+    "@titaniumnetwork-dev/ultraviolet": "^1.0.11",
+    "@tomphttp/bare-server-node": "^1.2.6",
+    "bare": "^0.0.2",
+    "express": "^4.18.2",
+    "node": "^20.2.0"
+  }
+}

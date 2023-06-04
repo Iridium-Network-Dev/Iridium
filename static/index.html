@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Iridium</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/appsgames.css" rel="stylesheet" type="text/css">
+        <link href="css/settings.css" rel="stylesheet" type="text/css">
+        <script src="index.js"></script>
+        <script src="abcloak.js"></script>
+        <script src="uv/uv.bundle.js" defer></script>
+        <script src="uv/uv.config.js" defer></script>
+        <script src="register-sw.js" defer></script>
+        <script src="search.js" defer></script>
+        <script src="pindex.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+      
+    <body>
+        <form id="uv-form" class="search-box" style="margin:5px;">
+            <button id="btn-search"><i class="fas fa-search"></i></button>
+                <input type="text" id="uv-address" class="input-search" placeholder="Type to Search...">
+        </form>
+        <div class="otherbtns">
+            <button id="apps" class="button" style="cursor:pointer" onclick="openmenu()"><i class="fa-solid fa-layer-group"></i></button>
+            <button id="settings" style="cursor:pointer" class="button" onclick="openSettings()"><i class="fa-solid fa-sliders"></i></button>
+            <button id="discord" style="cursor:pointer" class="button"><i class="fa-brands fa-discord"></i></button>
+            <button id="github" style="cursor:pointer" class="button" onclick="window.open('https://github.com/Iridium-Network-Dev/Iridium');"><i class="fa-brands fa-github fa-lg"></i></button>
+        </div>
+        <!--menu-->
+        <div id="menu" class="menu">
+            <div class="searchmenu">
+                <button class="closebtn" onclick="closemenu('menu')"><i class="fa-solid fa-chevron-left fa-beat"></i></button>
+                <input placeholder="...Search For Games And Apps..." id="agsearch" />
+                <div class="appgame" style="position:absolute; top: 2vh; left: 79vw; border-color:#d7c49eff; border-style: outset; padding: 0.3em; border-radius: 7%;">
+		            <button class="appgamebutton"><i class="fa-solid fa-layer-group fa-2xl"></i></button>
+                    <button class="appgamebutton"><i class="fa-solid fa-gamepad fa-2xl"></i></button>
+	            </div>
+            </div>
+            <div class="menu-content">
+                <hr style="width: 80vw;">
+                <div>
+
+                </div>
+            </div>
+        </div>
+        <!--settings-->
+        <div id="settingsmenu" class="settingsmenu">
+            <button class="closebtn" onclick="closeSettings()">&times;</button>
+            <h1 id="settingsh1" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; position: absolute; color: #d7c49eff; font-size: 3vw; left: 18vw;">Settings</h1>
+            <div class="sitems">
+                <div class="settings1">
+                    <hr style="width: 80vw;">
+                    <h2 style="position:absolute; left:7vw;">Tab Title</h2>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p style="margin-right: 2vw; font-size: 1.2vw;">© 2023 - 2023 Iridium Proxy - All Rights Reserved.</p>
+        <footer>
+    </body>
+</html>

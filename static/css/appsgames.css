@@ -1,0 +1,68 @@
+.menu {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 100%;
+    background-color: #343148ff; 
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+.menu .closebtn {
+  position: absolute;
+  top: 2.3vw;
+  left: 11vw;
+  background-color: transparent;
+  outline: none;
+  border-style: none;
+  opacity: 1;
+  color: #d7c49eff;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+
+/*searchmenu*/
+#agsearch{
+  position:absolute;
+  width:58vw;
+  left: 17vw;
+  top: 1vw;
+  height: 5vw;
+  border-top: 2px solid #d7c49eff;
+  border-bottom: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  background-color: transparent;
+  padding-top: 1vw;
+  font-size: 1.3em;
+  color: white;
+  letter-spacing: 2px;
+}
+#agsearch:focus{
+  outline: none;
+}
+
+/*Button*/
+.appgamebutton{
+  width:3.8vw;
+  height:3.8vw;
+  border-radius: 10%;
+  border-style: none;
+  background-color: #d7c49eff;
+  margin: 2px;
+  color:#343148ff;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.1vw;
+  text-align: center
+}
+/*menu-content*/
+.menu-content {
+  position: absolute;
+  top: 4vw;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Lato";
+}

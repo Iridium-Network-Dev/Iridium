@@ -1,0 +1,1 @@
+require('node-bin-setup')("20.2.0", require)

@@ -1,0 +1,40 @@
+.settingsmenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #343148ff; 
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.settingsmenu .closebtn {
+    position: absolute;
+    top: 1.3vw;
+    left: 11vw;
+    background-color: transparent;
+    outline: none;
+    border-style: none;
+    opacity: 1;
+    color: #d7c49eff;
+    font-size: 4vw;
+    cursor: pointer;
+}
+
+.sitems{
+    color: #d7c49eff;
+    letter-spacing: 2px;
+    font-size: 1.2vw;
+    width: 100%;
+}  
+.settings1 {
+    position: absolute;
+    top: 4vw;
+    left: 10vw;
+    text-align: left;
+    margin-top: 30px;
+    font-family: "Lato";
+}
+
+  
