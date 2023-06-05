@@ -6,7 +6,6 @@
         <link href="css/appsgames.css" rel="stylesheet" type="text/css">
         <link href="css/settings.css" rel="stylesheet" type="text/css">
         <script src="index.js"></script>
-        <script src="abcloak.js"></script>
         <script src="uv/uv.bundle.js" defer></script>
         <script src="uv/uv.config.js" defer></script>
         <script src="register-sw.js" defer></script>
@@ -17,15 +16,17 @@
     </head>
       
     <body>
-        <form id="uv-form" class="search-box" style="margin:5px;">
-            <button id="btn-search"><i class="fas fa-search"></i></button>
+        <div class="search-box" style="margin:5px;">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <form id="uv-form">
                 <input type="text" id="uv-address" class="input-search" placeholder="Type to Search...">
-        </form>
+            </form>
+        </div>
         <div class="otherbtns">
             <button id="apps" class="button" style="cursor:pointer" onclick="openmenu()"><i class="fa-solid fa-layer-group"></i></button>
             <button id="settings" style="cursor:pointer" class="button" onclick="openSettings()"><i class="fa-solid fa-sliders"></i></button>
             <button id="discord" style="cursor:pointer" class="button"><i class="fa-brands fa-discord"></i></button>
-            <button id="github" style="cursor:pointer" class="button" onclick="window.open('https://github.com/Iridium-Network-Dev/Iridium');"><i class="fa-brands fa-github fa-lg"></i></button>
+            <button id="github" style="cursor:pointer" class="button" onclick="window.open('https://github.com/grite123454321/Iridium');"><i class="fa-brands fa-github fa-lg"></i></button>
         </div>
         <!--menu-->
         <div id="menu" class="menu">

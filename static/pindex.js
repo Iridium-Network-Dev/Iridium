@@ -26,6 +26,7 @@ form.addEventListener("submit", async (event) => {
   try {
     await registerSW();
   } catch (err) {
+    alert(err);
     error.textContent = "Failed to register service worker.";
     errorCode.textContent = err.toString();
     throw err;

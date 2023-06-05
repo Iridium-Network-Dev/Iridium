@@ -6,7 +6,7 @@ const bare = createBareServer("/bare/");
 const app = express();
 
 // serve your css as static
-app.use(express.static(__dirname+"/static"));
+app.use(express.static(__dirname+"/static/"));
 
 
 server.on("request", (req, res) => {
@@ -26,7 +26,7 @@ server.on("upgrade", (req, socket, head) => {
 });
 
 server.listen({
-  port: 3000,
+  port: 8080,
 });
 
 
