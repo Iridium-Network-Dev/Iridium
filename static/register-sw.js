@@ -14,7 +14,6 @@ const swAllowedHostnames = ["localhost", "127.0.0.1"];
  * Used in 404.html and index.html
  */
 async function registerSW() {
-  alert('lol');
   if (
     location.protocol !== "https:" &&
     !swAllowedHostnames.includes(location.hostname)
