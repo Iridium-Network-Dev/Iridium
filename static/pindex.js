@@ -24,6 +24,8 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   try {
     await registerSW();
+    const url = search(address.value, searchEngine.value);
+    location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
   } catch (err) {
     alert(err);
     error.textContent = "Failed to register service worker.";
@@ -31,6 +33,4 @@ form.addEventListener("submit", async (event) => {
     throw err;
   }
 
-  const url = search(address.value, searchEngine.value);
-  location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
 });
