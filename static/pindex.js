@@ -22,8 +22,6 @@ const errorCode = document.getElementById("uv-error-code");
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  alert('submit')
-
   try {
     await registerSW();
   } catch (err) {
