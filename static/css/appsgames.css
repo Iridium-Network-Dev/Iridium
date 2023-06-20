@@ -93,3 +93,8 @@ border-radius: 10%;
 width:12vw;
 height:12vw;
 }
+
+.agbtn a{
+text-decoration: none;
+color:white;
+}
