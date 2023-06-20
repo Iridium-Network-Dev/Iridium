@@ -15,6 +15,7 @@ body {
 hr{
   border: 1px solid #d7c49eff;
 }
+
 /*the buttons*/
 .button {
   height: 50px;
@@ -31,7 +32,7 @@ hr{
   margin: 0px;
   font-size: 25px;
 }
-button:hover {
+.button:hover {
   opacity: 0.5;
 }
 /*footer*/

@@ -2,21 +2,31 @@
 <html>
     <head>
         <title>Iridium</title>
-        <link href="css/style.css" rel="stylesheet" type="text/css">
-        <link href="css/appsgames.css" rel="stylesheet" type="text/css">
-        <link href="css/settings.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/appsgames.css" type="text/css">
+        <link rel="stylesheet" href="css/settings.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
         <script src="index.js"></script>
         <script src="uv/uv.bundle.js" defer></script>
         <script src="uv/uv.config.js" defer></script>
         <script src="register-sw.js" defer></script>
         <script src="search.js" defer></script>
         <script src="pindex.js" defer></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script>
+            function proxy(url) {
+                window.navigator.serviceWorker.register("/sw.js", {
+                    scope: __uv$config.prefix,
+                }).then(() => {
+                    location.href = __uv$config.prefix +__uv$config.encodeUrl(url)
+                });
+            }
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
       
     <body>
-        <div class="search-box" style="margin:5px;">
+        <div class="search-box" id='yes' style="margin:5px;">
             <form id="uv-form">
                 <button id="searchbtn" type="button"><i class="fas fa-search"></i></button>
                 <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/>
@@ -24,36 +34,248 @@
             </form>
         </div>
         <div class="otherbtns">
-            <button id="apps" class="button" style="cursor:pointer" onclick="openmenu()"><i class="fa-solid fa-layer-group"></i></button>
-            <button id="settings" style="cursor:pointer" class="button" onclick="openSettings()"><i class="fa-solid fa-sliders"></i></button>
-            <button id="discord" style="cursor:pointer" class="button"><i class="fa-brands fa-discord"></i></button>
-            <button id="github" style="cursor:pointer" class="button" onclick="window.open('https://github.com/grite123454321/Iridium');"><i class="fa-brands fa-github fa-lg"></i></button>
+            <button id="agbtn" class="button" style="cursor:pointer" onclick="openMenu('agmenu')"><i class="fa-solid fa-layer-group"></i></button>
+            <button id="settingsbtn" style="cursor:pointer" class="button" onclick="openMenu('settingsmenu')"><i class="fa-solid fa-sliders"></i></button>
+            <button id="discordbtn" style="cursor:pointer" class="button"><i class="fa-brands fa-discord"></i></button>
+            <button id="githubbtn" style="cursor:pointer" class="button" onclick="window.open('https://github.com/grite123454321/Iridium');"><i class="fa-brands fa-github fa-lg"></i></button>
         </div>
-        <!--menu-->
-        <div id="menu" class="menu">
+        <!--games and apps-->
+        <div id="agmenu" class="agmenu">
             <div class="searchmenu">
-                <button class="closebtn" onclick="closemenu('menu')"><i class="fa-solid fa-chevron-left fa-beat"></i></button>
-                <input placeholder="...Search For Games And Apps..." id="agsearch" />
+                <button class="closebtn" onclick="closeMenu('agmenu')"><i class="fa-solid fa-chevron-left fa-beat"></i></button>
+                <input placeholder="...Search For Games And Apps..." id="agsearch" onkeyup="filter();"/>
                 <div class="appgame" style="position:absolute; top: 2vh; left: 79vw; border-color:#d7c49eff; border-style: outset; padding: 0.3em; border-radius: 7%;">
-		            <button class="appgamebutton"><i class="fa-solid fa-layer-group fa-2xl"></i></button>
-                    <button class="appgamebutton"><i class="fa-solid fa-gamepad fa-2xl"></i></button>
+		            <button class="appgamebutton" onclick="agSwap('a')"><i class="fa-solid fa-layer-group fa-2xl"></i></button>
+                    <button class="appgamebutton" onclick="agSwap('g')"><i class="fa-solid fa-gamepad fa-2xl"></i></button>
 	            </div>
             </div>
-            <div class="menu-content">
+            <div class="agmenu-content">
                 <hr style="width: 80vw;">
-                <div>
-
+                <div class="agbuttons" style="width: 80vw; left:10vw; position: absolute; height: 38vw; overflow-y: scroll;">
+                    <div id="apps" style="display: initial;">
+                        <button class="agbtn" onclick="proxy('https://9anime.to')">
+                            <img src="assets/apps/9anime.png"/>
+                            <p>9Anime</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://amazon.com')">
+                            <img src="assets/apps/amazon.png"/>
+                            <p>Amazon</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://chat.chatgptdemo.net')">
+                            <img src="assets/apps/chatgpt.png"/>
+                            <p>ChatGPT</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://chess.com')">
+                            <img src="assets/apps/chess.png"/>
+                            <p>Chess.com</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://coolmathgames.com')">
+                            <img src="assets/apps/coolmath.png"/>
+                            <p>Cool Math Games</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://discord.com')">
+                            <img src="assets/apps/discord.jpg"/>
+                            <p>Discord</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://espn.com')">
+                            <img src="assets/apps/espn.webp"/>
+                            <p>ESPN</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://flixhq.to')">
+                            <img src="assets/apps/flixhq.png"/>
+                            <p>Flix HQ</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://play.geforcenow.com')">
+                            <img src="assets/apps/geforce-now.png"/>
+                            <p>Geforce NOW</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://github.com')">
+                            <img src="assets/apps/github.png"/>
+                            <p>Github</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://hbomax.com')">
+                            <img src="assets/apps/hbo.webp"/>
+                            <p>HBO Max</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://messenger.com')">
+                            <img src="assets/apps/messenger.png"/>
+                            <p>Messenger</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://netflix.com')">
+                            <img src="assets/apps/netflix.webp"/>
+                            <p>Netflix</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://paramountplus.com')">
+                            <img src="assets/apps/paramount.png"/>
+                            <p>Paramount Plus</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://pinterest.com')">
+                            <img src="assets/apps/pinterest.png"/>
+                            <p>Pinterest</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://poki.com')">
+                            <img src="assets/apps/poki.png"/>
+                            <p>Poki</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://quora.com')">
+                            <img src="assets/apps/quora.jpeg"/>
+                            <p>Quora</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://reddit.com')">
+                            <img src="assets/apps/reddit.png"/>
+                            <p>Reddit</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://snapchat.com')">
+                            <img src="assets/apps/snapchat.png"/>
+                            <p>Snapchat</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://soundcloud.com')">
+                            <img src="assets/apps/soundcloud.jpg"/>
+                            <p>Soundcloud</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://spotify.com')">
+                            <img src="assets/apps/spotify.png"/>
+                            <p>Spotify</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://web.telegram.org')">
+                            <img src="assets/apps/telegram.png"/>
+                            <p>Telegram</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://tiktok.com')">
+                            <img src="assets/apps/tiktok.png"/>
+                            <p>Tiktok</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://tumblr.com')">
+                            <img src="assets/apps/tumblr.png"/>
+                            <p>Tumblr</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://twitch.tv')">
+                            <img src="assets/apps/twitch-tv.png"/>
+                            <p>Twitch</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://twitter.com')">
+                            <img src="assets/apps/twitter.png"/>
+                            <p>Twitter</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://whatsapp.com')">
+                            <img src="assets/apps/whatsapp.png"/>
+                            <p>Whatsapp</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://y8.com')">
+                            <img src="assets/apps/y8.png"/>
+                            <p>Y8 Games</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://youtube.com')">
+                            <img src="assets/apps/yt.png"/>
+                            <p>Youtube</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://zoro.to')">
+                            <img src="assets/apps/zoroto.png"/>
+                            <p>Zoro.to</p>
+                        </button>
+                    </div>
+                    <div id="games" style="display: none;">
+                        <button class="agbtn" onclick="proxy('https://1v1.lol')">
+                            <img src="assets/games/1v1lol.jpg"/>
+                            <p>1v1.lol</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://adarkroom.doublespeakgames.com/')">
+                            <img src="assets/games/ADR.png"/>
+                            <p>A Dark Room</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://agar.io')">
+                            <img src="assets/games/agario.png"/>
+                            <p>Agar.io</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://xlegends.github.io/bitlife/')">
+                            <img src="assets/games/bitlife.png"/>
+                            <p>Bitlife</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://diep.io')">
+                            <img src="assets/games/diepio.png"/>
+                            <p>Diep.io</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://ustymukhman.github.io/webDOOM/public/')">
+                            <img src="assets/games/doom1.png"/>
+                            <p>Doom</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://ev.io')">
+                            <img src="assets/games/ev.jpeg"/>
+                            <p>Ev.io</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://hole-io.com')">
+                            <img src="assets/games/hole.png"/>
+                            <p>Hole.io</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://interstellarnetwork.github.io/Interstellar-Assets/play/idle-breakout/index.html')">
+                            <img src="assets/games/idlebreakout.png"/>
+                            <p>Idle Breakout</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://krunker.io')">
+                            <img src="assets/games/krunker.jpg"/>
+                            <p>Krunker.io</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://static.arcadespot.com/retroemulator.php?system=n64&amp;game=2017/06/mario-kart-64.zip')">
+                            <img src="assets/games/mario-kart-64.jpg"/>
+                            <p>Mario Kart 64</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://overboy.itch.io/mobs-inc')">
+                            <img src="assets/games/mobsinc.png"/>
+                            <p>Mobs INC</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://moomoo.io')">
+                            <img src="assets/games/moo.png"/>
+                            <p>Moomoo.io</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://html5.gamedistribution.com/rvvASMiM/5b0abd4c0faa4f5eb190a9a16d5a1b4c/index.html')">
+                            <img src="assets/games/mx3m.jpg"/>
+                            <p>Moto X3M</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('')">
+                            <a>
+                                <img src="assets/games/retrobowl.png"/>
+                                <p>Retrobowl</p>
+                            </a>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://html5.gamedistribution.com/rvvASMiM/c3a70ae98547407a92ebedca8b79fdfa/index.html')">
+                            <img src="assets/games/rooftop.jpeg"/>
+                            <p>Rooftop Snipers</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://shellshock.io')">
+                            <img src="assets/games/shellshock.png"/>
+                            <p>Shell Shockers</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('')">
+                            <img src="assets/games/"/>
+                            <p>Slither.io</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('')">
+                            <img src="assets/games/"/>
+                            <p>Smashkarts</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('https://ngspacecompany.freddecgames.com/')">
+                            <img src="assets/games/sc.png"/>
+                            <p>Space Company</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('')">
+                            <img src="assets/games/"/>
+                            <p>Zombs Royale</p>
+                        </button>
+                        <button class="agbtn" onclick="proxy('')">
+                            <img src="assets/games/"/>
+                            <p></p>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
         <!--settings-->
         <div id="settingsmenu" class="settingsmenu">
-            <button class="closebtn" onclick="closeSettings()">&times;</button>
+            <button class="closebtn" onclick="closeMenu('settingsmenu')">&times;</button>
             <h1 id="settingsh1" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; position: absolute; color: #d7c49eff; font-size: 3vw; left: 18vw;">Settings</h1>
             <div class="sitems">
                 <div class="settings1">
                     <hr style="width: 80vw;">
-                    <h2 style="position:absolute; left:7vw;">Tab Title</h2>
                 </div>
             </div>
         </div>
