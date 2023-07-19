@@ -2,13 +2,14 @@
 <html>
     <head>
         <title>Iridium</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="stylesheet" href="css/appsgames.css" type="text/css">
-        <link rel="stylesheet" href="css/settings.css" type="text/css">
+        <link rel="stylesheet" href="assets/files/css/style.css" type="text/css">
+        <link rel="stylesheet" href="assets/files/css/appsgames.css" type="text/css">
+        <link rel="stylesheet" href="assets/files/css/settings.css" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-        <script src="index.js"></script>
-        <script src="uv/uv.bundle.js" defer></script>
+        <script src="assets/files/js/index.js"></script>
+        <script src="assets/files/js/abcloak.js"></script>
+        <script id="" src="uv/uv.bundle.js" defer></script>
         <script src="uv/uv.config.js" defer></script>
         <script src="register-sw.js" defer></script>
         <script src="search.js" defer></script>
@@ -37,7 +38,7 @@
             <button id="agbtn" class="button" style="cursor:pointer" onclick="openMenu('agmenu')"><i class="fa-solid fa-layer-group"></i></button>
             <button id="settingsbtn" style="cursor:pointer" class="button" onclick="openMenu('settingsmenu')"><i class="fa-solid fa-sliders"></i></button>
             <button id="discordbtn" style="cursor:pointer" class="button"><i class="fa-brands fa-discord"></i></button>
-            <button id="githubbtn" style="cursor:pointer" class="button" onclick="window.open('https://github.com/grite123454321/Iridium');"><i class="fa-brands fa-github fa-lg"></i></button>
+            <button id="githubbtn" style="cursor:pointer" class="button" onclick="window.open('https://github.com/Iridium-Network-Dev/Iridium');"><i class="fa-brands fa-github fa-lg"></i></button>
         </div>
         <!--games and apps-->
         <div id="agmenu" class="agmenu">
@@ -170,7 +171,7 @@
                             <p>Whatsapp</p>
                         </button>
                         <button class="agbtn">
-                            <a href="assets/files/webretro-standalone.html">
+                            <a href="assets/files/games/webretro-standalone.html">
                                 <img src="assets/img/apps/webretro.png"/>
                                 <p>Webretro</p>
                             </a>
@@ -194,7 +195,7 @@
                             <p>1v1.lol</p>
                         </button>
                         <button class="agbtn">
-                            <a href="assets/files/2048/index.html">
+                            <a href="assets/files/games/2048/index.html">
                                 <img src="assets/img/games/2048.png"/>
                                 <p>2048</p>
                             </a>
@@ -298,14 +299,40 @@
         <div id="settingsmenu" class="settingsmenu">
             <button class="closebtn" onclick="closeMenu('settingsmenu')">&times;</button>
             <h1 id="settingsh1" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; position: absolute; color: #d7c49eff; font-size: 3vw; left: 18vw;">Settings</h1>
-            <div class="sitems">
-                <div class="settings1">
-                    <hr style="width: 80vw;">
+            <hr style="width: 80vw; position: absolute; top: 5.5vw; left: 10vw; text-align: left; margin-top: 30px;">
+            <div class="settingbtn" style="position: absolute; top: 3vw; left: 70vw;">
+                <button onclick="save();">Save</button>
+                <button onclick="setDefault();">Default</button>
+            </div>
+            <div class="settings" style="width: 78vw; left:11vw; top:9vw; position: absolute; height: 38vw; overflow-y: scroll;">
+                <div class="sitem">
+                    <h2>About:Blank Cloak</h2>
+                    <p>About Blank Cloaking Technology prevents this site from showing in your history. <br>This option is disabled to prevent the leakage of links.</p>
+                    <label class="ab switch">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="sitem">
+                    <h2>Tab Appearance</h2>
+                    <p>Change the tab appearance of this page! Change the text <br>in the first option, and the image(or favicon) in the secon<br>-d. Hide this page from your teachers.</p>
+                    <div class="tabinput" style="float: right;">
+                        <input id="tabtext" style="top: 13vw; right: 6vw;" placeholder="Tab Text"/>
+                        <input id="favicon" style="top: 18vw; right: 6vw;" placeholder="Favicon"/>
+                    </div>
+                </div>
+                <div class="sitem soon">
+                    <h2>Coming Soon</h2>
+                    <p>Got any suggestions?</p>
+                </div>
+                <div class="sitem soon">
+                    <h2>Coming Soon</h2>
+                    <p>Got any suggestions?</p>
                 </div>
             </div>
         </div>
         <footer>
-            <p style="margin-right: 2vw; font-size: 1.2vw;">© 2023 - 2023 Iridium Proxy - All Rights Reserved.</p>
+            <p style="margin-right: 2vw; font-size: 1.2vw;">Iridium Proxy - version 1.1.0</p>
         <footer>
     </body>
 </html>

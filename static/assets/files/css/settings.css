@@ -1,0 +1,140 @@
+.settingsmenu {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 100%;
+    background-color: #343148ff; 
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.settingsmenu .closebtn {
+    position: absolute;
+    top: 1.3vw;
+    left: 11vw;
+    background-color: transparent;
+    outline: none;
+    border-style: none;
+    opacity: 1;
+    color: #d7c49eff;
+    font-size: 4vw;
+    cursor: pointer;
+}
+
+.sitem {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1.2vw;
+    padding: 1vw;
+    padding-left: 3vw;
+    border: 2px  #d7c49eff;
+    border-style: none solid solid solid;
+    border-radius: 1vw;
+}
+
+/*ab switch*/
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 4.5vw;
+    height: 2.7vw;
+    top: 5vw;
+    left: 68vw;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2.1vw;
+    width: 2.1vw;
+    left: 0.3vw;
+    bottom: 0.3vw;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(2vw);
+    -ms-transform: translateX(2vw);
+    transform: translateX(2vw);
+}
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 2.3vw;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*setting buttons*/
+.settingbtn button{
+  border-radius: 10%;
+  cursor: pointer;
+  color: #d7c49eff;
+  font-size: 1.7vw;
+  font-weight: 600;
+  margin-right: 10px;
+  padding: 0.5vw;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #d7c49eff;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: 0.2s ease-in;
+}
+
+.settingbtn button:hover{
+    text-shadow: 0 0 10px #d7c49eff;
+    transform: scale(1.05)
+}
+
+/*tab appearance*/
+.tabinput input{
+    position: absolute;
+    width: 25vw;
+    height: 3vw;
+    font-size: 1.5vw;
+    padding-left: 0.5vw;
+    border-top: transparent;
+    border-bottom: 2px solid white;
+    border-left: transparent;
+    border-right: transparent;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.soon{
+    text-align: center;
+}

@@ -58,6 +58,11 @@ font-size: 1.1vw;
 text-align: center;
 cursor:pointer;
 }
+
+.appgamebutton:hover{
+opacity: 0.5;
+}
+
 /*menu-content*/
 .agmenu-content {
 position: absolute;
