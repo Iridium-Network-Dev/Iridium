@@ -26,6 +26,7 @@ form.addEventListener("submit", async (event) => {
     await registerSW();
     const url = search(address.value, searchEngine.value);
     location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+    $('quikmenu').style.cssText = "display:flex;";
   } catch (err) {
     alert(err);
     error.textContent = "Failed to register service worker.";
