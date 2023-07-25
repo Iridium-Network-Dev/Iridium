@@ -18,7 +18,7 @@ hr{
 
 
 /*the buttons*/
-.button {
+.otherbtns button {
   height: 50px;
   width: 50px;
   border-style: none;
@@ -33,7 +33,7 @@ hr{
   margin: 0px;
   font-size: 25px;
 }
-.button:hover {
+.otherbtns button:hover {
   opacity: 0.5;
 }
 /*footer*/
@@ -100,4 +100,47 @@ footer {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
-/*menu*/
+
+
+/* quick menu*/
+.quikmenu{
+  position: fixed;
+  background-color: #343148ff;
+  border: none;
+  border-radius: 5vw;
+  padding: 1vw;
+  top:-4.7vw;
+  transition: all 0.3s ease-out;
+  align-items: ho;
+}
+.quikmenu:hover{
+  transform: translateY(5vw);
+  border: 1px solid #d7c49eff;
+}
+
+.quikmenu button{
+  height: 3vw;
+  width: 3vw;
+  border: 1px solid #d7c49eff;
+  padding: 0.6vw;
+  outline: none;
+  border-radius: 1.5vw;
+  background-color: transparent;
+  color: #d7c49eff;
+  margin: 0px;
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+.quikmenu input{
+  height: 3vw;
+  border: 1px solid #d7c49eff;
+  padding: 1vw;
+  outline: none;
+  border-radius: 1.5vw;
+  background-color: transparent;
+  padding: 0.6vw;
+  color: #d7c49eff;
+  margin: 0px;
+  font-size: 1.5vw;
+  letter-spacing: 2px;
+}
