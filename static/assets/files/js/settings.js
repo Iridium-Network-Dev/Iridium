@@ -13,6 +13,16 @@ window.onload = (event) => {
     }
 };
 
+function fsSwap(){
+    var fs = $('fullscreenswitch').innerHTML;
+    if(fs.innerHtml = "<input type='checkbox' checked><span class='slider round'></span>"){
+        fs.innerHtml = "<input type='checkbox'><span class='slider round'></span>";
+    }
+    else{
+        fs.innerHtml = "<input type='checkbox' checked><span class='slider round'></span>";
+    }
+}
+
 function saveSettings(){
     tabtext = $("tabtext").value;
     favicon = $("favicon").value;
