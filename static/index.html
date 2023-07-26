@@ -31,21 +31,22 @@
             <button onclick="window.location.href = './';"><i class="fa-solid fa-x"></i></button>
             <!--<i class="fa-solid fa-compress"></i>-->
         </div>
-        <div class="search-box" id='yes' style="margin:5px;">
+        <div class="main-content" id="main-content" style="display: initial;">
+            <div class="search-box" id='yes' style="margin:5px;">
             <form id="uv-form">
                 <button id="searchbtn" type="button"><i class="fas fa-search"></i></button>
                 <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden"/>
                 <input type="text" id="uv-address" class="input-search" placeholder="Type to Search...">
             </form>
-        </div>
-        <div class="otherbtns">
+            </div>
+            <div class="otherbtns">
             <button id="agbtn" class="button" style="cursor:pointer" onclick="openMenu('agmenu')"><i class="fa-solid fa-layer-group"></i></button>
             <button id="settingsbtn" style="cursor:pointer" class="button" onclick="openMenu('settingsmenu')"><i class="fa-solid fa-sliders"></i></button>
             <button id="discordbtn" style="cursor:pointer" class="button"><i class="fa-brands fa-discord"></i></button>
             <button id="githubbtn" style="cursor:pointer" class="button" onclick="window.open('https://github.com/Iridium-Network-Dev/Iridium');"><i class="fa-brands fa-github fa-lg"></i></button>
-        </div>
-        <!--games and apps-->
-        <div id="agmenu" class="agmenu">
+            </div>
+            <!--games and apps-->
+            <div id="agmenu" class="agmenu">
             <div class="searchmenu">
                 <button class="closebtn" onclick="closeMenu('agmenu')"><i class="fa-solid fa-chevron-left fa-beat"></i></button>
                 <input placeholder="...Search For Games And Apps..." id="agsearch" onkeyup="filter();"/>
@@ -298,9 +299,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!--settings-->
-        <div id="settingsmenu" class="settingsmenu">
+            </div>
+            <!--settings-->
+            <div id="settingsmenu" class="settingsmenu">
             <button class="closebtn" onclick="closeMenu('settingsmenu')">&times;</button>
             <h1 id="settingsh1" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; position: absolute; color: #d7c49eff; font-size: 3vw; left: 18vw;">Settings</h1>
             <hr style="width: 80vw; position: absolute; top: 5.5vw; left: 10vw; text-align: left; margin-top: 30px;">
@@ -334,9 +335,11 @@
                     <p>Got any suggestions?</p>
                 </div>
             </div>
+            </div>
+            <footer>
+            <p style="margin-right: 2vw; font-size: 1.2vw;">Iridium Proxy - Beta Stage</p>
+        <footer>
         </div>
-        <footer>
-            <p style="margin-right: 2vw; font-size: 1.2vw;">Iridium Proxy - version 1.1.0</p>
-        <footer>
+        <iframe src="" id="iframe" style="display: none;" name="Iframe" scrolling="yes" allowfullscreen></iframe>
     </body>
 </html>

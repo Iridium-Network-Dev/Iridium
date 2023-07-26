@@ -9,14 +9,21 @@ function openMenu(id) {
 function closeMenu(id) {
     $(id).style.left = "100%";
 }
+
+function iframe(src){
+    $('main-content').style.cssText = "display: none;";
+    $('quikmenu').style.cssText = "display:flex;";
+    $('iframe').style.cssText = "display: initial;";
+    $('iframe').src = src;
+}
+
 //from interstellar
 function proxy(url) {
     window.navigator.serviceWorker.register("/sw.js", {
         scope: __uv$config.prefix,
     }).then(() => {
-        location.href = __uv$config.prefix +__uv$config.encodeUrl(url)
+        iframe(__uv$config.prefix +__uv$config.encodeUrl(url));
     });
-    $('quikmenu').style.cssText = "display:flex;";
 }
 
 function fullscreen(){
