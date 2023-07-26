@@ -112,7 +112,7 @@ footer {
 /* quick menu*/
 .quikmenu{
   position: fixed;
-  background-color: #343148ff;
+  background-color: transparent;
   border: none;
   border-radius: 5vw;
   padding: 1vw;
@@ -123,6 +123,7 @@ footer {
 .quikmenu:hover{
   transform: translateY(5vw);
   border: 1px solid #d7c49eff;
+  background-color: #343148ff;
 }
 
 .quikmenu button{
