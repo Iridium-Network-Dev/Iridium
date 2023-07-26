@@ -22,8 +22,8 @@
       
     <body>
         <div class="quikmenu" id="quikmenu" style="display: none;">
-            <button onclick="history.back();"><i class="fa-solid fa-arrow-left"></i></button>
-            <button onclick="history.forward();"><i class="fa-solid fa-arrow-right"></i></button>
+            <button onclick="$('iframe').contentWindow.history.back();"><i class="fa-solid fa-arrow-left"></i></button>
+            <button onclick="$('iframe').contentWindow.history.forward();"><i class="fa-solid fa-arrow-right"></i></button>
             <form id="quikform">
                 <input id="quikinput" type="text">
             </form>
