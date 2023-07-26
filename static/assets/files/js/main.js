@@ -36,8 +36,3 @@ function fullscreen(){
     }
 }
 
-$('quikform').addEventListener("submit", (event) => {
-    event.preventDefault();
-    alert($('quikinput').value);
-    proxy($('quikinput').value);
-});
