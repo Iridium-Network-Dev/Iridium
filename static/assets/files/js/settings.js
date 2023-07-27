@@ -13,13 +13,13 @@ window.onload = (event) => {
     }
 };
 
-function fsSwap(){
-    var fs = $('fullscreenswitch').innerHTML;
-    if(fs.innerHtml = "<input type='checkbox' checked><span class='slider round'></span>"){
-        fs.innerHtml = "<input type='checkbox'><span class='slider round'></span>";
+function settingSwitch(id){
+    var switch1 = $(id).innerHTML;
+    if(switch1.includes("checked")){
+        switch1 = "<input type='checkbox'><span class='slider round'></span>";
     }
     else{
-        fs.innerHtml = "<input type='checkbox' checked><span class='slider round'></span>";
+        switch1 = "<input type='checkbox' checked><span class='slider round'></span>";
     }
 }
 
