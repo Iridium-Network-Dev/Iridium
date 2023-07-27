@@ -15,9 +15,11 @@ window.onload = () => {
 function settingSwitch(id){
     var switch1 = $(id).innerHTML;
     if(switch1.includes("checked")){
+        alert();
         switch1 = "<input type='checkbox'><span class='slider round'></span>";
     }
     else{
+        alert();
         switch1 = "<input type='checkbox' checked><span class='slider round'></span>";
     }
 }
