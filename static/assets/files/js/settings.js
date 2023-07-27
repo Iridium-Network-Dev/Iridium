@@ -3,39 +3,19 @@
 window.onload = () => {
     $("tabtext").value = window.localStorage.getItem('name');
     $("favicon").value = window.localStorage.getItem('icon');
-    if(window.localStorage.getItem('fs?') == false){
-        $('fullscreenswitch').checked = false;
-    }
-    if(window.localStorage.getItem('fs?') == true){
-        $('fullscreenswitch').checked = true;
-    }
-};
-
-$("fullscreenswitch").addEventListener( "click", () => {
-    var theSwitch = $("fullscreenswitch");
-    if(theSwitch.checked){
-        theSwitch.checked = false;
-    }
-    else{
-        theSwitch.checked = true;
-    }
- });
+}
 
 function saveSettings(){
     tabtext = $("tabtext").value;
     favicon = $("favicon").value;
-    fs = $('fullscreenswitch').checked;
-    alert(fs);
     window.localStorage.setItem('name', tabtext);
     window.localStorage.setItem('icon', favicon);
-    window.localStorage.setItem('fs?', fs);
     resetPage();
 }
 
 function setDefault(){
     window.localStorage.setItem('name', "My Drive - Google Drive");
     window.localStorage.setItem('icon', "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png");
-    window.localStorage.setItem('fs?', false);
     resetPage();
 }
 
