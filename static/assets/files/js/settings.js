@@ -1,9 +1,10 @@
 //settings
 
 window.onload = () => {
+    isfs = window.localStorage.getItem('fs?')
     $("tabtext").value = window.localStorage.getItem('name');
     $("favicon").value = window.localStorage.getItem('icon');
-    $('fullscreenswitch').checked = window.localStorage.getItem('fs?');
+    $('fullscreenswitch').checked = isfs;
 };
 
 $("fullscreenswitch").addEventListener( "change", () => {
@@ -20,6 +21,7 @@ function saveSettings(){
     tabtext = $("tabtext").value;
     favicon = $("favicon").value;
     fs = $('fullscreenswitch').checked;
+    alert(fs);
     window.localStorage.setItem('name', tabtext);
     window.localStorage.setItem('icon', favicon);
     window.localStorage.setItem('fs?', fs);
