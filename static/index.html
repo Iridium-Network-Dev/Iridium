@@ -58,7 +58,7 @@
                 <button id="agbtn" class="button" style="cursor:pointer" onclick="openMenu('agmenu')">
                     <i class="fa-solid fa-layer-group"></i>
                 </button>
-                <button id="settingsbtn" style="cursor:pointer" class="button" onclick="openMenu('settingsmenu')">
+                <button id="settingsbtn" style="cursor:pointer" class="button" onclick="openMenu('settingsmenu'); $('fullscreenswitch').checked = window.localStorage.getItem('fs?');">
                     <i class="fa-solid fa-sliders"></i>
                 </button>
                 <button id="discordbtn" style="cursor:pointer" class="button">

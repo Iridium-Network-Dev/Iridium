@@ -1,7 +1,6 @@
 //settings
 
 window.onload = () => {
-    $('fullscreenswitch').checked = window.localStorage.getItem('fs?');
     $("tabtext").value = window.localStorage.getItem('name');
     $("favicon").value = window.localStorage.getItem('icon');
 };
