@@ -5,7 +5,7 @@ window.onload = (event) => {
     $("tabtext").value = window.localStorage.getItem('name');
     $("favicon").value = window.localStorage.getItem('icon');
 
-    if(window.localStorage.getItem('fs?').includes('checked') == true){
+    if(window.localStorage.getItem('fs?').includes('checked')){
         $('fullscreenswitch').innerHtml = "<input type='checkbox' checked><span class='slider round'></span>";
     }
     else{
