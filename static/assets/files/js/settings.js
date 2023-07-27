@@ -7,7 +7,7 @@ window.onload = () => {
     $('fullscreenswitch').checked = isfs;
 };
 
-$("fullscreenswitch").addEventListener( "change", () => {
+$("fullscreenswitch").addEventListener( "click", () => {
     var theSwitch = $("fullscreenswitch");
     if(theSwitch.checked){
         theSwitch.checked = false;
