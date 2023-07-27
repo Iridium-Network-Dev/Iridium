@@ -1,10 +1,10 @@
 //settings
 
 window.onload = () => {
-    isfs = window.localStorage.getItem('fs?')
+    //isfs = window.localStorage.getItem('fs?')
     $("tabtext").value = window.localStorage.getItem('name');
     $("favicon").value = window.localStorage.getItem('icon');
-    $('fullscreenswitch').checked = isfs;
+//$('fullscreenswitch').checked = isfs;
 };
 
 $("fullscreenswitch").addEventListener( "click", () => {
