@@ -3,6 +3,12 @@
 window.onload = () => {
     $("tabtext").value = window.localStorage.getItem('name');
     $("favicon").value = window.localStorage.getItem('icon');
+    if(window.localStorage.getItem('fs?') == false){
+        $('fullscreenswitch').checked = false;
+    }
+    if(window.localStorage.getItem('fs?') == true){
+        $('fullscreenswitch').checked = true;
+    }
 };
 
 $("fullscreenswitch").addEventListener( "click", () => {
