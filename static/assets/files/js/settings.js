@@ -1,10 +1,5 @@
 //settings
 
-window.onload = () => {
-    $("tabtext").value = window.localStorage.getItem('name');
-    $("favicon").value = window.localStorage.getItem('icon');
-}
-
 function saveSettings(){
     tabtext = $("tabtext").value;
     favicon = $("favicon").value;

@@ -79,7 +79,7 @@ width: 80vw;
 border-radius: 10%;
 cursor: pointer;
 color: white;
-font-size: 1.7vw;
+font-size: 1.5vw;
 border: none;
 cursor: pointer;
 background-color: transparent;
@@ -95,8 +95,8 @@ transform: scale(1.1);
 
 .agbtn img{
 border-radius: 10%;
-width:12vw;
-height:12vw;
+width:11.43vw;
+height:11.43vw;
 }
 
 .agbtn a{

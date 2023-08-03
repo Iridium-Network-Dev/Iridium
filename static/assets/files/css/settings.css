@@ -31,6 +31,12 @@
     border: 2px  #d7c49eff;
     border-style: none solid solid solid;
     border-radius: 1vw;
+    opacity: 0.5;
+    transition: .4s;
+}
+
+.sitem:hover{
+    opacity: 1;
 }
 
 /*ab switch*/

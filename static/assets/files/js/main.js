@@ -1,6 +1,20 @@
+window.onload = () => {
+    showTime();
+
+    /*$('text').textContent = text[Math.round(Math.random()*(text.length-1))];
+
+    if(Math.round(Math.random()*1000000) == 1) {
+        $('text').textContent = secret;
+    }*/
+
+    $("tabtext").value = window.localStorage.getItem('name');
+    $("favicon").value = window.localStorage.getItem('icon');
+}
+
 function $(id){
     return document.getElementById(id);
 }
+
 //menu
 function openMenu(id) {
     $(id).style.left = "0";
@@ -38,10 +52,12 @@ function fullscreen(){
 
 //clock
 function showTime(){
-    var date = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
+    var d = new Date();
+    var h = d.getHours(); // 0 - 23
+    var m = d.getMinutes(); // 0 - 59
+    var s = d.getSeconds(); // 0 - 59
+    var day = d.getDay();
+    var date = d.getUTCMonth() + 1 + "/" + d.getUTCDate() + "/" + d.getUTCFullYear();
     var session = "AM";
     
     if(h == 0){
@@ -52,12 +68,42 @@ function showTime(){
         h = h - 12;
         session = "PM";
     }
+
+    switch(day){
+        case 1:
+            day = "Mon";
+            break;
+
+        case 2:
+            day = "Tue";
+            break;
+        
+        case 3:
+            day = "Wen";
+            break;
+
+        case 4:
+            day = "Thurs";
+            break;
+        
+        case 5:
+            day = "Fri";
+            break;
+
+        case 6:
+            day = "Sat";
+            break;
+        
+        case 7:
+            day = "Sun";
+            break;
+    }
     
     h = (h < 10) ? "0" + h : h;
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
     
-    var time = h + ":" + m + ":" + s + " " + session;
+    var time = day + " | " + date + " | " + h + ":" + m + ":" + s + " " + session;
     document.getElementById("clock").innerText = time;
     document.getElementById("clock").textContent = time;
     
@@ -65,4 +111,23 @@ function showTime(){
     
 }
 
-showTime();
+//text
+/*text = ["Welcome to Iridium!",
+ "A Simple and Light Weight Proxy",
+ "Recommend games and/or apps in our Discord!",
+ "Deployment tutorial in our Discord!",
+ "1+1=2",
+ "There is a 1/1,000,000 chance of seeing where the creator of Iridium lives.",
+ "Recommend more texts in our Discord!",
+ "Share with your friends!",
+ "This uses Ultraviolet",
+ "Go to our Github repository!",
+ "69420 lines of code!!!",
+ "Dee snuts",
+ "Never trust white text!",
+ "Pay attention to ur class!",
+ "No playing games."
+]
+
+//Hey!!! No peeking!!!
+secret = "He lives in Austin, Texas!!!";*/
