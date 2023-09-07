@@ -29,6 +29,7 @@
     "@tomphttp/bare-server-node": "^1.2.6",
     "bare": "^0.0.2",
     "express": "^4.18.2",
+    "hint.css": "^2.7.0",
     "node": "^20.2.0"
   }
 }

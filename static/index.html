@@ -3,6 +3,7 @@
     <head>
         <title>Iridium | A Simple and Light Weight Proxy </title>
         <link rel="icon" type="image/x-icon" href="assets/img/iridiumlogorounded.png" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2.7.0/hint.min.css">
         <link rel="stylesheet" href="assets/files/css/style.css" type="text/css">
         <link rel="stylesheet" href="assets/files/css/appsgames.css" type="text/css">
         <link rel="stylesheet" href="assets/files/css/settings.css" type="text/css">
@@ -21,10 +22,10 @@
     </head>
     <body>
         <div class="quikmenu" id="quikmenu" style="display: none;">
-            <button onclick="$('iframe').history.back();">
+            <button onclick="$('iframe').contentWindow.history.back();">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <button onclick="$('iframe').history.forward();">
+            <button onclick="$('iframe').contentWindow.history.forward();">
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
             <form id="quikform" onsubmit="">
@@ -56,16 +57,16 @@
                 </form>
             </div>
             <div class="otherbtns">
-                <button id="agbtn" class="button" style="cursor:pointer" onclick="openMenu('agmenu')">
+                <button id="agbtn" class="button hint--top hint--rounded hint--bounce" aria-label="Games and Apps" style="cursor:pointer" onclick="openMenu('agmenu')">
                     <i class="fa-solid fa-layer-group"></i>
                 </button>
-                <button id="settingsbtn" style="cursor:pointer" class="button" onclick="openMenu('settingsmenu'); ">
+                <button id="settingsbtn" style="cursor:pointer" class="button hint--top hint--rounded hint--bounce" aria-label="Settings" onclick="openMenu('settingsmenu'); ">
                     <i class="fa-solid fa-sliders"></i>
                 </button>
-                <button id="discordbtn" style="cursor:pointer" class="button">
+                <button id="discordbtn" style="cursor:pointer" class="button hint--top hint--rounded hint--bounce hint--info" aria-label="Our Discord Server is still being setup.">
                     <i class="fa-brands fa-discord"></i>
                 </button>
-                <button id="githubbtn" style="cursor:pointer" class="button" onclick="window.open('https://github.com/Iridium-Network-Dev/Iridium');">
+                <button id="githubbtn" style="cursor:pointer" class="button hint--top hint--rounded hint--bounce" aria-label="Fork and Deploy to Render!" onclick="window.open('https://github.com/Iridium-Network-Dev/Iridium');">
                     <i class="fa-brands fa-github fa-lg"></i>
                 </button>
             </div>
@@ -287,7 +288,7 @@
                                 <img src="assets/img/games/mx3m.jpg" />
                                 <p>Moto X3M</p>
                             </button>
-                            <button class="agbtn" onclick="proxy('https://vtn5c31dcjtimmb9o2lm882bk13i56hh-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=https://274079163-174037128449362058.preview.editmysite.com/uploads/b/139890129-899796311729593176/files/rtbl.xml&container=enterprise&view=default&lang=en&country=ALL&sanitize=0&v=9cec2ba00d185a8c&libs=core&mid=88&parent=https://www.sites.google.com/site/unblockedgame76/retrobowl#st=e%3DAIHE3cDiq285ogOjABWumru6EIm8oM9NFMKiJX3kKW6bpXQAYZh9Lm2lJ6qJJ5mvGezZOvqvpvOQIAhzPJh9ccPIU2sD4GnCpfgpoO010B274Px9FBeAoyi0bC1sHpFLeZL9%252FX1oPaJZ%26c%3Denterprise&rpctoken=-6542037258845926169')">
+                            <button class="agbtn" onclick="iframe('assets/files/games/retrobowl/index.html')">
                                 <img src="assets/img/games/retrobowl.png" />
                                 <p>Retrobowl</p>
                             </button>
