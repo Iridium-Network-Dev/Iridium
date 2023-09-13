@@ -20,7 +20,7 @@
         <script src="pindex.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
+    <body id="body" style="background-color: #343148ff;">
         <div class="quikmenu" id="quikmenu" style="display: none;">
             <button onclick="$('iframe').contentWindow.history.back();">
                 <i class="fa-solid fa-arrow-left"></i>
@@ -40,7 +40,7 @@
             <button id="fs" onclick="fullscreen();">
                 <i class="fa-solid fa-expand"></i>
             </button>
-            <button onclick="window.location.href = './';">
+            <button onclick="window.location.href = './'; $('body').style.cssText='background-color: #343148ff;';">
                 <i class="fa-solid fa-x"></i>
             </button>
             <!--<i class="fa-solid fa-compress"></i>-->

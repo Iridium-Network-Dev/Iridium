@@ -28,6 +28,7 @@ function iframe(src){
     $('main-content').style.cssText = "display: none;";
     $('quikmenu').style.cssText = "display:flex;";
     $('iframe').style.cssText = "display: initial;";
+    $('body').style.cssText = "background-color: transparent;";
     $('iframe').src = src;
 }
 
