@@ -43,7 +43,7 @@ async function registerSW() {
 registerSW();
 
 
-function go(){
+function go(url){
     if (!isUrl(url)){
         searchurl(url); 
     } 
