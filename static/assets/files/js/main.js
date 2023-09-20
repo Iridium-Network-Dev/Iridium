@@ -32,13 +32,42 @@ function iframe(src){
     $('iframe').src = src;
 }
 
-//from interstellar
+async function registerSW() {
+	if (!("serviceWorker" in navigator)) return;
+	const workerURL = "/uv.sw-handler.js";
+	const worker = await navigator.serviceWorker.getRegistration(workerURL);
+	if(worker) return worker;
+	return navigator.serviceWorker.register(workerURL, { scope: __uv$config.prefix });
+}
+
+registerSW();
+
+
+function go(){
+    if (!isUrl(url)){
+        searchurl(url); 
+    } 
+    else {
+		if (!(url.startsWith("https://") || url.startsWith("http://"))){
+             url = "http://" + url
+        }
+		proxy(url)
+	}
+}
+
+function searchurl(url) {
+	proxy(`https://www.google.com/search?q=${url}`)
+}
+
 function proxy(url) {
-    window.navigator.serviceWorker.register("/sw.js", {
-        scope: __uv$config.prefix,
-    }).then(() => {
+    registerSW().then(() => {
         iframe(__uv$config.prefix +__uv$config.encodeUrl(url));
     });
+}
+
+function isUrl(val = "") {
+	if (/^http(s?):\/\//.test(val) || val.includes(".") && val.substr(0, 1) !== " ") return true;
+	return false;
 }
 
 function fullscreen(){
