@@ -10,7 +10,7 @@ Iridium is a simple and lightweight proxy/game site. With tons of the best games
 
 - About:Blank Cloaking
 - Fast Speeds 
-- Tons of the best of Games.
+- Tons of Games.
 - Tab Cloaking
 - Wide collection of Apps
 - A Simple and Modern Interface
@@ -36,3 +36,7 @@ In our server, you can:
 - Recommend Games/Apps
 - Ask For Other Features
 - Have Fun and Talk To People!
+
+
+## License
+[GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/)
