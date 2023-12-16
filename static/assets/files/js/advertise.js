@@ -1,9 +1,10 @@
 function ad(){
-    var num = Math.floor(Math.random() * 8);
-    if(window.localStorage.getItem("ad?") == null){
-        alert('If you want to display a message whenever this link loads for once, please go to link+"/ad.html" for more info.');
-        if(num == 0){
+    //var num = Math.floor(Math.random() * 5);
+    if(1==1){
+        //alert('If you want to display a message whenever this link loads for once, please go to link+"/ad.html" for more info.');
+        alert('Happy Winter Break!')
+       /* if(num == 0){
             window.localStorage.setItem("ad?", "yes");
-        }
+        }*/
     }
 }
